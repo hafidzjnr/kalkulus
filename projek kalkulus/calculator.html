@@ -5,16 +5,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="calculator.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <nav>
-        <div class="logo">MasterKuadrat</div>
-        <ul>
-            <li><a href="#beranda">Beranda</a></li>
-            <li><a href="#kalkulator">Kalkulator</a></li>
-            <li><a href="#grafik">Grafik</a></li>
-        </ul>
-    </nav>
+    <header>
+        <a href="#" class="Logo">Fungsi Kuadrat</a>
+        
+        <input type="checkbox", id="check">
+        <label for="check" class="icons">
+          <i class='bx bx-menu'id="menu-icons"></i>
+          <i class='bx bx-x'id="colse-icons" style="display: none;"></i>
+        </label>
+      
+        <nav>
+          <a href="index.html" class="active" style="--i:0;">Home</a>
+          <a href="pembahasan.html" style="--i:1;">Pembahasan</a>
+          <a href="calculator.html" style="--i:2;">Menghitung</a>
+          <a href="profil.html" style="--i:3;">Team</a>
+        </nav>
+      </header>
 
     <div class="container">
         <section id="beranda" class="animate__animated animate__fadeIn">

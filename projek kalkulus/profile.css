@@ -12,20 +12,86 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(#AED2FF, #E4F1FF);
+    background: url(img/freepik__expand__40979.png);
+    background-size: cover;
+    background-position: center;
 }
 
-nav {
-  background: #2c3e50;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px); 
+    z-index: -1;
+  }
+  
+  header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4) ,transparent);
+    transition: .5s;
+  }
+  
+  header:hover::after {
+    left: 100%;
+  }
+  
+  header .Logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 40px;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  
+  header nav a:hover,
+  header nav a:active {
+    background: #fff;
+    color: #2b1055;
+  }
+
+#check {
+    display: none;
+  }
+  
+header .icons {
+    position: absolute;
+    font-size: 2.8rem;
+    right: 5%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+
 .logo {
   color: white;
   font-size: 1.5rem;
@@ -33,40 +99,9 @@ nav {
 }
 .wrapper .title{
     text-align: center;
+    color: #fff;
 }
 
-nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-}
-
-nav ul li a {
-  color: white;
-  display: grid;
-  place-content: center;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-nav ul li a:hover {
-  background: #34495e;
-}
-.menu::before{
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 2px;
-  background: #fff;
-  border-radius: 5px;
-  transform: scale(0);
-  transition: all .5s ease;
-  bottom: 0;
-  left: 0;
-}
 .wrapper .card_Container{
     position: relative;
     display: flex;
@@ -78,8 +113,8 @@ nav ul li a:hover {
 
 .card_Container .card{
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 200px;
+    height: 320px;
     margin: 20px;
     overflow: hidden;
     box-shadow: 0 30px 30px -20px rgba(0,0,0,1), inset 0 0 0 1000px rgba(67,52,109,6);
@@ -167,12 +202,108 @@ nav ul li a:hover {
     font-size: 24px;
 }
 
+@media (max-width: 1024px) {
+    header {
+        padding: 2px 50px; /* Reduce padding for smaller screens */
+    }
+
+    header .Logo {
+        font-size: 1.5em; /* Decrease logo size */
+    }
+
+    nav a {
+        margin-left: 20px; /* Reduce margin between nav links */
+    }
+
+    .card_Container .card {
+        width: 90%; /* Make cards take more width on smaller screens */
+        height: auto; /* Allow height to adjust automatically */
+    }
+}
+
 @media (max-width: 768px) {
-  .calculator-container {
-      grid-template-columns: 1fr;
+    body {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to start */
+        padding: 20px; /* Add padding */
+    }
+
+    header {
+        flex-direction: column; /* Stack header items */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    header nav {
+        margin-top: 10px; /* Add space between logo and nav */
+    }
+
+    .wrapper .card_Container {
+        margin: 20px 0; /* Reduce margin for card container */
+    }
+
+    .card_Container .card {
+        margin: 10px; /* Reduce margin for cards */
+    }
+
+    .content .sci li a {
+        font-size: 20px; /* Adjust icon size */
+    }
+}
+
+/* BREAKPOINT */
+@media (max-width: 992px) {
+    header {
+      padding: 1.3rem;
+    }
   }
   
-  nav ul {
+  @media (max-width: 768px) {
+    header .icons {
+      display: inline-flex;
+    }
+  
+    #check:checked~header .icons #menu-icons{
       display: none;
+    }
+  
+    header .icons #colse-icons {
+      display: none;
+    }
+  
+    #check:checked~header .icons #close-icons{
+      display: block;
+    }
+  
+    nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: rgba(0, 0, 0, .1);
+      backdrop-filter: blur(50px);
+      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+      overflow: hidden;
+      transition: .3s ease;
+    }
+  
+    #check:checked~nav {
+      height: 17.7rem;
+    }
+  
+    nav a {
+      display: block;
+      font-size: 1.1rem;
+      margin: 1.5rem 0;
+      text-align: center;
+      transform: translateY(-50px);
+      opacity: 0;
+      transition: .3s ease;
+    }
+  
+    #check:checked~nav a {
+      transform: translateY(0);
+      opacity: 1;
+      transition-delay: calc(.15s * var(--i));
+    }
   }
-}

@@ -1,5 +1,4 @@
 
-
 var typed = new Typed('.typewriter-text', 
     {
 

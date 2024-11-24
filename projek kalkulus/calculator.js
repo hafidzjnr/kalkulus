@@ -64,10 +64,10 @@ function updateProperties(a, b, c) {
 
     const propertiesDiv = document.getElementById('properties');
     propertiesDiv.innerHTML = `
-        <p>Discriminant: ${discriminant.toFixed(2)}</p>
-        <p>Vertex: (${vertex[0].toFixed(2)}, ${vertex[1].toFixed(2)})</p>
-        <p>Y-intercept: ${yIntercept.toFixed(2)}</p>
-        <p>X-intercepts: ${Array.isArray(xIntercepts) ? xIntercepts.map(x => x.toFixed(2)).join(', ') : xIntercepts}</p>
+        <p>Diskriminan : ${discriminant.toFixed(2)}</p>
+        <p>vertex : (${vertex[0].toFixed(2)}, ${vertex[1].toFixed(2)})</p>
+        <p>perpotongan sumbu y: ${yIntercept.toFixed(2)}</p>
+        <p>perpotongan sumbu x: ${Array.isArray(xIntercepts) ? xIntercepts.map(x => x.toFixed(2)).join(', ') : xIntercepts}</p>
     `;
 }
 
@@ -98,8 +98,8 @@ function initChart() {
                 y: {
                     type: 'linear',
                     position: 'center',
-                    min: -400,
-                    max: 400,
+                    min: -20,
+                    max: 20,
                     title: {
                         display: true,
                         text: 'y'

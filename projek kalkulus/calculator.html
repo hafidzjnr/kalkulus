@@ -8,59 +8,28 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <a href="#" class="Logo">Fungsi Kuadrat</a>
+    <header class="navbar-container">
+        <d class="logo">
+          <img src="img/logoquadragraph.png"  />
+        </d>
         
         <input type="checkbox", id="check">
         <label for="check" class="icons">
           <i class='bx bx-menu'id="menu-icons"></i>
-          <i class='bx bx-x'id="colse-icons" style="display: none;"></i>
+          <i class='bx bx-x'id="close-icons" style="display: none;"></i>
         </label>
       
-        <nav>
-          <a href="index.html" class="active" style="--i:0;">Home</a>
-          <a href="pembahasan.html" style="--i:1;">Pembahasan</a>
-          <a href="calculator.html" style="--i:2;">Menghitung</a>
-          <a href="profil.html" style="--i:3;">Team</a>
+        <nav class="nav-list">
+          <ul>
+            <li><a href="index.html" class="active" style="--i:0;">Home</a></li>
+            <li><a href="pembahasan.html" style="--i:1;">Pembahasan</a></li>
+            <li><a href="calculator.html" style="--i:2;">Menghitung</a></li>
+            <li><a href="profil.html" style="--i:3;">Team</a></li>
+          </ul>
         </nav>
       </header>
 
     <div class="container">
-        <section id="beranda" class="animate__animated animate__fadeIn">
-            <h1>Jelajahi Fungsi Kuadrat</h1>
-            <p>Platform pembelajaran interaktif untuk memahami fungsi kuadrat</p>
-            
-            <div class="explanation">
-                <h2>Penjelasan Fungsi Kuadrat</h2>
-                <p>
-                    Fungsi kuadrat adalah fungsi polinomial berderajat dua yang memiliki bentuk umum f(x) = ax² + bx + c, di mana:
-                </p>
-                <ul>
-                    <li>a ≠ 0 (jika a = 0, maka fungsinya bukan kuadrat)</li>
-                    <li>a, b, dan c adalah konstanta real</li>
-                    <li>x adalah variabel</li>
-                </ul>
-                <h3>Karakteristik fungsi kuadrat:</h3>
-                <ol>
-                    <li>Grafik fungsi kuadrat berbentuk parabola.</li>
-                    <li>Jika a > 0, parabola terbuka ke atas (cembung).</li>
-                    <li>Jika a < 0, parabola terbuka ke bawah (cekung).</li>
-                    <li>Sumbu simetri parabola adalah garis vertikal yang membagi parabola menjadi dua bagian yang simetris.</li>
-                    <li>Titik puncak parabola adalah titik tertinggi (jika a < 0) atau terendah (jika a > 0) pada parabola.</li>
-                </ol>
-                <h3>Fungsi kuadrat memiliki beberapa komponen penting:</h3>
-                <ol>
-                    <li>Titik potong sumbu y: titik di mana parabola memotong sumbu y, yaitu (0, c).</li>
-                    <li>Titik potong sumbu x: titik-titik di mana parabola memotong sumbu x, jika ada.</li>
-                    <li>Sumbu simetri: garis vertikal yang membagi parabola menjadi dua bagian yang simetris.</li>
-                    <li>Titik puncak: titik tertinggi atau terendah pada parabola.</li>
-                </ol>
-                <p>
-                    Fungsi kuadrat digunakan dalam berbagai bidang, termasuk fisika, ekonomi, dan teknik, untuk memodelkan berbagai fenomena seperti lintasan peluru, analisis keuntungan, dan banyak lagi.
-                </p>
-            </div>
-        </section>
-
         <section id="kalkulator" class="animate__animated animate__fadeIn">
             <h2>Kalkulator Fungsi Kuadrat</h2>
             <div class="calculator-container">

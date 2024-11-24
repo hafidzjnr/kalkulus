@@ -178,8 +178,7 @@
   .explore-button:hover {
     background-color: #444;
   }
-  
-  /* .container {
+.container {
     max-width: 1200px;
     margin-top: 50px;
     padding: 20px;
@@ -198,6 +197,9 @@
     padding: 20px;
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .explanation h2, .explanation h3 {
@@ -217,9 +219,13 @@
     font-weight: bold;
     font-style: italic;
     list-style-type: none;
-  } */
-  
-  /* BREAKPOINT */
+  }
+  .center{
+    text-align: center;
+    font-weight: bold;
+  }
+
+
   @media (max-width: 992px) {
     header {
       padding: 1.3rem;

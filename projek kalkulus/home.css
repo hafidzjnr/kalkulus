@@ -9,7 +9,90 @@
     min-height: 100vh;
     background: #fff;
     display: flex;
+    justify-content: center;*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background-image: url('img/BG1.png');
+    background-color: #fff; /* Warna latar belakang cadangan */
+    min-height: 100vh;
+    display: flex;
     justify-content: center;
+    background-size: cover; /* Menyesuaikan ukuran gambar latar belakang */
+    background-position: center; /* Memposisikan gambar di tengah */
+    border: 10px solid rgb(0, 0, 0); /* Menambahkan garis tepi berwarna hitam */
+    padding: 10px; /* Menambahkan padding untuk memberi jarak antara border dan konten */
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam total lebar dan tinggi */
+}
+  
+.welcome {
+    display: flex;
+    align-items: center; /* Vertikal center */
+    justify-content: center;
+}
+  
+  .welcome-image {
+    max-width: 25%; /* Atur lebar gambar menjadi 25% */
+    height: auto; /* Menjaga rasio aspek gambar */
+    margin-right: 40px;
+}
+
+.welcome-text {
+    max-width: 50%; /* Atur lebar teks sesuai kebutuhan */
+    display: flex;
+    flex-direction: column; /* Mengatur elemen dalam kolom */
+    align-items: center; /* Memusatkan teks */
+}
+  
+  .welcome h1 {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 1000;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+  .welcome p {
+    color: #000000;
+    font-size: 0.9em;
+  }
+  
+  .enter {
+    /* Gaya tombol yang sudah ada */
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+    background-color: rgb(253, 173, 69);
+    padding: 15px 30px; /* Menambahkan padding kiri dan kanan */
+    border-radius: 15px;
+    font-size: 1em;
+    font-weight: 1000;
+    margin-top: 20px; /* Mengubah margin atas menjadi lebih kecil */
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi */
+  }
+  
+  .enter:hover {
+    background-color: #fff;
+    color: rgb(253, 173, 69);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan saat hover */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+  }
+  
+  span {
+    color: #000;
+  }
+
+.typewriter-text{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
     background-size: cover;
     background-position: center;
   }

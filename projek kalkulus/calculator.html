@@ -6,11 +6,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="calculator.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="navbar-container">
         <d class="logo">
-          <img src="img/logoquadragraph.png"  />
+            <a href="index.html">
+                <img src="img/logoquadragraph.png" alt="QuadraGraph_Logo"/>
+            </a>
+            <a href="index.html">
+                <span>QuadraGraph</span>
+            </a>
         </d>
         
         <input type="checkbox", id="check">
@@ -21,7 +27,6 @@
       
         <nav class="nav-list">
           <ul>
-            <li><a href="index.html" class="active" style="--i:0;">Home</a></li>
             <li><a href="pembahasan.html" style="--i:1;">Pembahasan</a></li>
             <li><a href="calculator.html" style="--i:2;">Menghitung</a></li>
             <li><a href="profil.html" style="--i:3;">Team</a></li>
@@ -29,46 +34,51 @@
         </nav>
       </header>
 
-    <div class="container">
-        <section id="kalkulator" class="animate__animated animate__fadeIn">
-            <h2>Kalkulator Fungsi Kuadrat</h2>
-            <div class="calculator-container">
-                <div class="input-section">
-                    <div class="coefficient-input">
-                        <label for="a">a: <span id="a-value">1</span></label>
-                        <div class="input-group">
+      <div class="wrapper">
+        <div data-aos="zoom-in" data-aos-delay="50"class="title">
+            <h2 data-aos="zoom-in" data-aos-delay="50">-  Kalkulator Fungsi Kuadrat  -</h2>
+        </div>
+
+        <br><section id="kalkulator" class="animate__animated animate__fadeIn">
+            <div data-aos="zoom-in" data-aos-delay="50"class="calculator-container">
+                <div data-aos="zoom-in" data-aos-delay="50"class="input-section">
+                    <div data-aos="zoom-in" data-aos-delay="50"class="coefficient-input">
+                        <label data-aos="zoom-in" data-aos-delay="50"for="a">a: <span id="a-value">1</span></label>
+                        <div data-aos="zoom-in" data-aos-delay="50"class="input-group">
                             <input type="range" id="a" min="-100" max="100" step="0.1" value="1">
                             <input type="number" id="a-number" class="number-input" value="1" step="0.1">
                         </div>
                     </div>
-                    <div class="coefficient-input">
-                        <label for="b">b: <span id="b-value">0</span></label>
-                        <div class="input-group">
+
+                    <div data-aos="zoom-in" data-aos-delay="50"class="coefficient-input">
+                        <label data-aos="zoom-in" data-aos-delay="50"for="b">b: <span id="b-value">0</span></label>
+                        <div data-aos="zoom-in" data-aos-delay="50"class="input-group">
                             <input type="range" id="b" min="-100" max="100" step="0.1" value="0">
                             <input type="number" id="b-number" class="number-input" value="0" step="0.1">
                         </div>
                     </div>
-                    <div class="coefficient-input">
-                        <label for="c">c: <span id="c-value">0</span></label>
-                        <div class="input-group">
+
+                    <div data-aos="zoom-in" data-aos-delay="50"class="coefficient-input">
+                        <label data-aos="zoom-in" data-aos-delay="50"for="c">c: <span id="c-value">0</span></label>
+                        <div data-aos="zoom-in" data-aos-delay="50"class="input-group">
                             <input type="range" id="c" min="-100" max="100" step="0.1" value="0">
                             <input type="number" id="c-number" class="number-input" value="0" step="0.1">
                         </div>
                     </div>
                 </div>
 
-                <div class="hasil">
-                    <h3>Fungsi Kuadrat:</h3>
-                    <div id="function-notation" class="function-notation"></div>
-                    <h3>Sifat-sifat:</h3>
-                    <div id="properties"></div>
+                <div data-aos="zoom-in" data-aos-delay="50"class="hasil">
+                    <h3 data-aos="zoom-in" data-aos-delay="50">Fungsi Kuadrat:</h3>
+                    <div data-aos="zoom-in" data-aos-delay="50"id="function-notation" class="function-notation"></div>
+                    <h3 data-aos="zoom-in" data-aos-delay="50">Sifat-sifat:</h3>
+                    <div data-aos="zoom-in" data-aos-delay="50"id="properties"></div>
                 </div>
             </div>
         </section>
 
         <section id="grafik" class="animate__animated animate__fadeIn">
-            <h2>Grafik Fungsi Kuadrat</h2>
-            <div class="graph-container">
+            <br><br><h2 >Grafik Fungsi Kuadrat</h2>
+            <div class="graph-container" >
                 <canvas id="quadraticGraph"></canvas>
             </div>
         </section>
@@ -77,4 +87,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
     <script src="calculator.js"></script>
 </body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+
 </html>

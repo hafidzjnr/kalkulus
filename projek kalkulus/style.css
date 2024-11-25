@@ -6,12 +6,14 @@
   }
   
   body{
-    min-height: 100vh;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
+      background-image: url('img/BG1.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
   }
   
   header {
@@ -19,7 +21,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.3rem 10%;
+    padding: 0.2rem 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +92,6 @@
   
   header.navbar-container .nav-list ul {
     padding-left: 0;
-   
     display: flex;
     justify-content: center;
     gap: 2rem 1rem;
@@ -103,7 +104,6 @@
   header.navbar-container .nav-list li a {
     padding: 0.5rem 1.5rem;
     border-radius: 999px;
-   
     text-decoration: none;
     font-size: 1.05rem;
     font-weight: 500;
@@ -117,9 +117,28 @@
     color: white;
   }
 
+  .navbar-container {
+    display: flex; /* Menggunakan flexbox untuk navbar */
+    align-items: center; /* Memusatkan item secara vertikal */
+    justify-content: space-between; /* Mengatur jarak antara logo dan menu navigasi */
+  }
+  
+  .logo {
+    display: flex; /* Menggunakan flexbox untuk logo dan teks */
+    align-items: center; /* Memusatkan logo dan teks secara vertikal */
+  }
+  
   .logo img {
-    width: 50px;
-    right: 100px;
+    height: 50px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+    margin-right: 20px; /* Memberikan jarak antara logo dan teks */
+  }
+  
+  .logo span {
+      text-decoration: none; /* Menghapus garis bawah */
+      font-size: 24px; /* Ukuran font untuk teks QuadraGraph */
+      font-weight: bold; /* Menebalkan teks */
+      color: #000; /* Warna teks, sesuaikan dengan desain */
+      margin-left: 10px; /* Memberikan jarak antara logo dan teks */
   }
 
   main {
@@ -134,7 +153,7 @@
     padding: 1em;
     border: 1px solid #ddd;
     margin-bottom: 1em;
-    margin-top: 5em;
+    margin-top: 3.5em;
   }
   
   .definition h2 {
@@ -167,17 +186,28 @@
   }
   
   .explore-button {
-    background-color: #333;
-    color: #fff;
     border: none;
-    padding: 0.5em 1em;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 20px; /* Menambahkan padding kiri dan kanan */
+    border-radius: 10px;
     font-size: 1em;
+    font-weight: 1000;
+    margin-top: 20px; /* Mengubah margin atas menjadi lebih kecil */
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
   }
   
   .explore-button:hover {
-    background-color: #444;
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan saat hover */
+    cursor: pointer;
   }
+  
 .container {
     max-width: 1200px;
     margin-top: 50px;
@@ -192,7 +222,7 @@
   }
   
   .explanation {
-    background-color: #F5EFFF;
+    background-color: #f7f7f7;
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
@@ -214,12 +244,14 @@
   .explanation ul, .explanation ol {
     padding-left: 20px;
   }
+
   .notasi{
     text-align: center;
     font-weight: bold;
     font-style: italic;
     list-style-type: none;
   }
+  
   .center{
     text-align: center;
     font-weight: bold;
